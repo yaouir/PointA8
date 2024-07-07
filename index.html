@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PointA8</title>
+
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="js/canvas.min.js"></script>
+    <script src="js/jszip.min.js"></script>
+    <script src="js/filesaver.min.js"></script>
+
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="left">
+            <form action="">
+                <div class="form-group">
+                    <label for="images">Upload Image:</label>
+                    <input type="file" id="images" name="images[]" accept="image/jpeg, image/png" />
+                </div>
+
+                <div id="imageInformation"></div>
+
+                <div class="form-group">
+                    <label for="classInput">Add Class:</label>
+                    <input type="text" id="classInput" name="classInput" placeholder="Enter class name" />
+                    <button type="button" id="addClassButton">Add</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="classList">Class List:</label>
+                    <select name="classList" id="classList" size="10"></select>
+                </div>
+
+                <div id="bboxInformation"></div>
+
+                <div class="form-group">
+                    <label for="bboxes">Upload Annotations:</label>
+                    <input type="file" id="bboxes" name="bboxes[]" accept="application/json" />
+                </div>
+
+                <button type="button" id="saveBboxes">Download Annotations</button>
+
+                <div id="description">
+                    <h3>Shortcuts:</h3>
+                    <ul>
+                        <li>Mouse Wheel - Zoom in/out image</li>
+                        <li>Mouse Right Button - Drag/Pan image</li>
+                        <li>Arrow Keys - Cycle through classes</li>
+                        <li>Delete Key - Remove selected point</li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+        <div class="right" id="right">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</body>
+</html>
